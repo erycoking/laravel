@@ -1,8 +1,10 @@
 <?php
+namespace App;
 
-use Illuminate\Notification\Notifiable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
-class Author extends Eloquent{
+class Author extends Model{
 	use Notifiable;
 
 	/**

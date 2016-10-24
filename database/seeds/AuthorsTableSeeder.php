@@ -1,5 +1,8 @@
 <?php
 
+use App\Author;
+use Illuminate\database\Seeder;
+
 class AuthorsTableSeeder extends Seeder{
 	public function run(){
 		DB::table('authors')->delete();
