@@ -3,31 +3,28 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notifiable;
 
-class Book extends Model
+class Order_book extends Model
 {
-    use Notifiable;
-	/**
+     /**
      *attributes that represents the books table
      *
      *@var array
      */
-	protected $table = 'books';
+    protected $table = 'order_books';
     /**
      *attributes that are mass assignalble
      *
      *@var array
      */
-    protected $fillable =[
-    	'title', 'isbn', 'cover', 'price', 'author_id'
+    protected $fillable = [
     ];
     /**
      *relations between author and books
      *
      *function
      */
-    public function Author(){
-    	return $this->belongsTo('App\Author');
-    }
+    // public function Books(){
+    // 	return $this->belongsToMany('Book')->withPivot('amount', 'total');
+    // }
 }
